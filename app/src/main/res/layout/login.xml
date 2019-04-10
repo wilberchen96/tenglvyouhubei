@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+
+    <LinearLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="70dip"
+            android:paddingBottom="70dip">
+
+            <ImageView
+                android:layout_width="144dp"
+                android:layout_height="103dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/logo" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="24dip"
+            android:paddingRight="24dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="账号"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/ed_name"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="35dip"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入账号"
+                android:inputType="textVisiblePassword"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#333333"
+                android:textColorHint="@color/color_999999"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:id="@+id/ig_cleanname"
+                android:layout_width="18dip"
+                android:layout_height="18dip"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_1"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="24dip"
+            android:layout_marginRight="24dip"
+            android:background="@color/color_eeeeee" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="24dip"
+            android:paddingRight="24dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="密码"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/ed_password"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="35dip"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#333333"
+                android:textColorHint="@color/color_999999"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:id="@+id/ig_password"
+                android:layout_width="18dip"
+                android:layout_height="18dip"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_3"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="24dip"
+            android:layout_marginRight="24dip"
+            android:background="@color/color_eeeeee" />
+
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="52dip"
+            android:layout_marginLeft="24dip"
+            android:layout_marginTop="43dip"
+            android:layout_marginRight="24dip"
+            android:background="@drawable/loginselector"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

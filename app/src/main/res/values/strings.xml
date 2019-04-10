@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">犬夜叉</string>
+    <string name="DEFAULT_URL_TEST">http://47.106.230.39:8003</string>
+    <string name="DEFAULT_URL">http://47.106.230.39:8003</string>
+    <string name="noncestr">noncestr</string>
+    <string name="timestamp">timestamp</string>
+    <string name="sign">sign</string>
+    <string name="key">key</string>
+
+</resources>

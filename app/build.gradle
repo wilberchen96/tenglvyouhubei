@@ -1,0 +1,102 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.hbtl.yhb"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndkConfig.abiFilters 'armeabi-v7a'
+    }
+    signingConfigs {
+        release {
+            storeFile file('hexiao.jks')
+            storePassword 'hexiao'
+            keyAlias 'tlhx'
+            keyPassword 'hexiao'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources false
+            debuggable false
+            zipAlignEnabled true
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            debuggable true
+            zipAlignEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+    //所有的support的依赖 全部指定版本28.0.0
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                details.useVersion '28.0.0'
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    //rx 依赖  fastjson依赖  okhttp依赖
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.3'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.9.0'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.0'
+    implementation 'com.alibaba:fastjson:1.1.59.android'
+    //可选其它框架比如Gson
+    implementation 'com.afollestad.material-dialogs:core:0.9.1.0'
+    implementation 'com.afollestad.material-dialogs:commons:0.9.1.0'
+    //butterknife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //Rxpermission
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+    //design
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    //refresh
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    //版本 23以上（必须）
+    implementation 'com.android.support:design:28.0.0'
+    //版本随意（非必须，引用可以解决无法预览问题）
+    implementation 'com.github.prolificinteractive:material-calendarview:1.4.3'
+
+    implementation 'com.gyf.immersionbar:immersionbar:2.3.3'
+}

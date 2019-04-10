@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#5682FA</color>
+
+    <color name="toolbarIconColor">#ffffff</color>
+    <color name="toolbarTitleColor">#ffffff</color>
+    <color name="colorWhite">#ffffffff</color>
+    <color name="white">#ffffffff</color>
+    <color name="itemLowBackground">#d9d9d9</color>
+    <color name="orders_table_name">#323232</color>
+
+    <!--zxing-->
+    <color name="contents_text">#000000</color>
+    <color name="encode_view">#ffffff</color>
+    <color name="possible_result_points">#ffbd21</color>
+    <color name="result_minor_text">#c0c0c0</color>
+    <color name="result_points">#99cc00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#ff000000</color>
+    <color name="status_text">#ffffff</color>
+    <color name="viewfinder_mask">#50000000</color>
+    <color name="react">#63B8FF</color>
+    <color name="scanLineColor">#63B8FF</color>
+
+    <color name="common_color">#ff5f00</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_eeeeee">#eeeeee</color>
+    <color name="color_ffffff">#ffffff</color>
+    <color name="color_c61a04">#c61a04</color>
+    <color name="color_cccccc">#cccccc</color>
+    <color name="color_d81e06">#d81e06</color>
+    <color name="color_b0b8b2">#b0b8b2</color>
+    <color name="color_333333">#333333</color>
+    <color name="titlebg">#36B0FD</color>
+    <color name="color_19abff">#19abff</color>
+    <color name="color_e6e6e6">#e6e6e6</color>
+</resources>
